@@ -21,7 +21,7 @@ if( !is_front_page() ) {
       </a>
       <nav class="main-navigation">
         <ul class="main-navigation__list">
-            li>
+          <li>
             <a href="services.html">Услуги</a>
           </li>
           <li class="active">
