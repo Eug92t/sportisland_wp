@@ -15,6 +15,8 @@ add_action('wp_enqueue_scripts', 'si_scripts');
 add_filter('show_admin_bar', '__return_false');
 
 function si_setup() {
+    register_nav_menu('menu-header', 'Меню шапки');
+    register_nav_menu('menu-footer', 'Меню подвала');
     add_theme_support( 'custom-logo' );
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
