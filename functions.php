@@ -25,7 +25,7 @@ function si_setup() {
 Add js & css
 */
 function si_scripts(){
-    wp_enqueue_style('si-style', get_template_directory_uri() . '/assets/css/styles.css', [], '1.0', 'all');
-    wp_enqueue_script('si_js', get_template_directory_uri() . '/assets/js/js.js', [], '1.0', 'true');
+    wp_enqueue_style('si-style', _si_assets_path( 'css/styles.css' ), [], '1.0', 'all');
+    wp_enqueue_script('si_js', _si_assets_path( 'js/js.js' ) , [], '1.0', 'true');
 }
 ?>
