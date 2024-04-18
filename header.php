@@ -17,25 +17,6 @@ if( !is_front_page() ) {
   <header class="main-header">
     <div class="wrapper main-header__wrap">
       <?php the_custom_logo()?>
-      <!-- <nav class="main-navigation">
-        <ul class="main-navigation__list">
-          <li>
-            <a href="services.html">Услуги</a>
-          </li>
-          <li class="active">
-            <a href="trainers.html">Тренеры</a>
-          </li>
-          <li>
-            <a href="schedule.html">Расписание</a>
-          </li>
-          <li>
-            <a href="prices.html">Цены</a>
-          </li>
-          <li>
-            <a href="contacts.html">Контакты </a>
-          </li>
-        </ul>
-      </nav> -->
       <?php wp_nav_menu([
         'theme_location' => 'menu-header',
         'container' => 'nav',
