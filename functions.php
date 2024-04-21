@@ -30,6 +30,42 @@ function si_register() {
         'before_widget' => null,
         'after_widget' => null,
     ]);
+    register_sidebar([
+        'name' => 'Сайдбар в подвале',
+        'id' => 'si-footer',
+        'before_widget' => null,
+        'after_widget' => null,
+    ]);
+    register_sidebar([
+        'name' => 'Колонка в подвале 1',
+        'id' => 'si-footer-column-1',
+        'before_widget' => null,
+        'after_widget' => null,
+    ]);
+    register_sidebar([
+        'name' => 'Колонка в подвале 2',
+        'id' => 'si-footer-column-2',
+        'before_widget' => null,
+        'after_widget' => null,
+    ]);
+    register_sidebar([
+        'name' => 'Колонка в подвале 3',
+        'id' => 'si-footer-column-3',
+        'before_widget' => null,
+        'after_widget' => null,
+    ]);
+    register_sidebar([
+        'name' => 'Сайдбар карта',
+        'id' => 'si-map',
+        'before_widget' => null,
+        'after_widget' => null,
+    ]);
+    register_sidebar([
+        'name' => 'Сайдбар под картой',
+        'id' => 'si-map-under',
+        'before_widget' => null,
+        'after_widget' => null,
+    ]);
 }
 /*
 Add js & css
