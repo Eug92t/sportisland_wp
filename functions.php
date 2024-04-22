@@ -6,7 +6,10 @@
 function _si_assets_path( $path ) {
     return get_template_directory_uri(). '/assets/' .$path;
 }
-
+/*
+Custom Widget
+*/
+require_once(__DIR__ . '/inc/widget-text.php');
  /*
 Add logo, head-title, img, widgets for posts to admin panel
 */
@@ -62,10 +65,11 @@ function si_register() {
     ]);
     register_sidebar([
         'name' => 'Сайдбар под картой',
-        'id' => 'si-map-under',
+        'id' => 'si-after-map',
         'before_widget' => null,
         'after_widget' => null,
     ]);
+    register_widget('si_widget_text');
 }
 /*
 Add js & css
