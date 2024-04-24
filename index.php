@@ -6,14 +6,7 @@ if( is_home() ):
 <main class="main-content">
     <h1 class="sr-only">Страница категорий блога на сайте спорт-клуба SportIsland</h1>
     <div class="wrapper">
-    <ul class="breadcrumbs">
-        <li class="breadcrumbs__item breadcrumbs__item_home">
-        <a href="index.html" class="breadcrumbs__link">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-        <a href="blog.html" class="breadcrumbs__link">Блог</a>
-        </li>
-    </ul>
+    <?php get_template_part( 'tmp/breadcrumbs.php' ); ?>
     </div>
     <?php 
         if( have_posts() ):
@@ -51,13 +44,9 @@ if( is_home() ):
     </section>
     <?php
         else:
+            get_template_part( 'tmp/no-posts.php' );
+        endif;
     ?>
-    <section class="last-posts">
-        <div class="wrapper">
-            <h2 class="main-heading last-posts__h"> Нет записей </h2>
-        </div>
-    </section>    
-    <?php endif;?>
     
     
 <section class="categories">
@@ -94,14 +83,7 @@ else:
 <main class="main-content">
     <h1 class="sr-only">Страница на сайте спорт-клуба SportIsland</h1>
     <div class="wrapper">
-    <ul class="breadcrumbs">
-        <li class="breadcrumbs__item breadcrumbs__item_home">
-        <a href="index.html" class="breadcrumbs__link">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-        <a href="blog.html" class="breadcrumbs__link">Блог</a>
-        </li>
-    </ul>
+    <?php get_template_part( 'tmp/breadcrumbs.php' ) ?>
     </div>
 
     <?php 
@@ -143,13 +125,9 @@ else:
 
     <?php
         else:
+            get_template_part( 'tmp/no-posts.php' );
+        endif;
     ?>
-    <section class="last-posts">
-        <div class="wrapper">
-            <h2 class="main-heading last-posts__h"> Нет записей </h2>
-        </div>
-    </section>    
-    <?php endif;?>
 
 
     
