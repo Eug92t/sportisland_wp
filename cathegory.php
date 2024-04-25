@@ -1,25 +1,16 @@
 <?php
 get_header();
+$title = single_cat_title('', false);
 ?>
 
     <main class="main-content">
-      <h1 class="sr-only"> Страница категории Кардио в блоге сайта спортклуба SportIsland </h1>
+      <h1 class="sr-only"> Страница категории <?php echo $title ?> в блоге сайта спортклуба SportIsland </h1>
       <div class="wrapper">
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs__item breadcrumbs__item_home">
-            <a href="index.html" class="breadcrumbs__link">Главная</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="blog.html" class="breadcrumbs__link">Блог</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="category.html" class="breadcrumbs__link">Кардио</a>
-          </li>
-        </ul>
+      <?php get_template_part( 'tmp/breadcrumbs.php' ) ?>    
       </div>
       <section class="category-posts">
         <div class="wrapper">
-          <h2 class="main-heading category-posts__h"> кардио </h2>
+          <h2 class="main-heading category-posts__h"> <?php echo $title ?> </h2>
           <ul class="posts-list">
             <li class="last-post">
               <a href="single.html" class="last-post__link" aria-label="Читать текст статьи: Растяжка от болей в мышцах">

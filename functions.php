@@ -16,7 +16,7 @@ Add logo, head-title, img, widgets for posts to admin panel
 add_action('after_setup_theme', 'si_setup');
 add_action('widgets_init', 'si_register');
 add_action('wp_enqueue_scripts', 'si_scripts');
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');
 
 function si_setup() {
     register_nav_menu('menu-header', 'Меню шапки');
