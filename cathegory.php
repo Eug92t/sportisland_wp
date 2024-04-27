@@ -4,9 +4,10 @@ $title = single_cat_title('', false);
 ?>
 
     <main class="main-content">
-      <h1 class="sr-only"> Страница категории <?php echo $title ?> в блоге сайта спортклуба SportIsland </h1>
+      <h1 class="sr-only"> Страница категории <?php echo $title; ?> в блоге сайта спортклуба SportIsland </h1>
       <div class="wrapper">
-      <?php get_template_part( 'tmp/breadcrumbs.php' ) ?>    
+      <?php get_template_part( 'tmp/breadcrumbs' ); ?>
+      
       </div>
       <section class="category-posts">
         <div class="wrapper">

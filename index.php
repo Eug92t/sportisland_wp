@@ -6,7 +6,7 @@ if( is_home() ):
 <main class="main-content">
     <h1 class="sr-only">Страница категорий блога на сайте спорт-клуба SportIsland</h1>
     <div class="wrapper">
-    <?php get_template_part( 'tmp/breadcrumbs.php' ); ?>
+    <?php get_template_part( 'tmp/breadcrumbs' ); ?>
     </div>
     <?php 
         if( have_posts() ):
@@ -83,7 +83,7 @@ else:
 <main class="main-content">
     <h1 class="sr-only">Страница на сайте спорт-клуба SportIsland</h1>
     <div class="wrapper">
-    <?php get_template_part( 'tmp/breadcrumbs.php' ) ?>
+    <?php get_template_part( 'tmp/breadcrumbs' ); ?>
     </div>
 
     <?php 
@@ -125,7 +125,7 @@ else:
 
     <?php
         else:
-            get_template_part( 'tmp/no-posts.php' );
+            get_template_part( 'tmp/no-posts' );
         endif;
     ?>
 
