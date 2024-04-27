@@ -42,8 +42,7 @@ if( is_home() ):
         </ul>
     </div>
     </section>
-    <?php
-        else:
+    <?php else:
             get_template_part( 'tmp/no-posts.php' );
         endif;
     ?>
@@ -91,7 +90,7 @@ else:
     ?>
     <section class="last-posts">
     <div class="wrapper">
-        <h2 class="main-heading last-posts__h"> Записи </h2>
+        <h2 class="main-heading last-posts__h"> Лента </h2>
         <ul class="posts-list">
         <?php
         while( have_posts() ):
@@ -119,12 +118,11 @@ else:
         <?php endwhile; ?>
        
         </ul>
-        <?php the_posts_pagination()?>
+        <?php the_posts_pagination(); ?>
     </div>
     </section>
 
-    <?php
-        else:
+    <?php else:
             get_template_part( 'tmp/no-posts' );
         endif;
     ?>
