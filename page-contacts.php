@@ -10,7 +10,9 @@ get_header();
         <?php get_template_part( 'tmp/breadcrumbs' );?>
       </div>
       <section class="contacts">
-        <?php while( have_posts() ): 
+        <?php 
+          if( have_posts()) :
+          while( have_posts() ): 
           the_post();
           ?>
           
@@ -51,7 +53,10 @@ get_header();
           </form>
           
         </div>
-        <?php endwhile;?>
+        <?php 
+          endwhile;
+          endif;
+        ?>
       </section>
     </main>
 
