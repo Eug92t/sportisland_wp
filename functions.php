@@ -187,6 +187,42 @@ function si_register_types() {
         'supports'            => ['title'],
         'has_archive' => false
     ]);
+
+    register_taxonomy('shedule_days', ['shedule'], [
+        'labels'                => [
+            'name'              => 'Дни недели',
+            'singular_name'     => 'День',
+            'search_items'      => 'Найти день недели',
+            'all_items'         => 'Все дни недели',
+            'view_item '        => 'Посмотреть дни недели',
+            'edit_item'         => 'Редактировать дни недели',
+            'update_item'       => 'Обновить',
+            'add_new_item'      => 'Добавить день недели',
+            'new_item_name'     => 'Добавить день недели',
+            'menu_name'         => 'Все дни недели',
+        ],
+        'description'           => '',
+        'public'                => true,
+        'hierarchical'          => true
+    ]);
+    
+    register_taxonomy('places', ['shedule'], [
+        'labels'                => [
+            'name'              => 'Залы',
+            'singular_name'     => 'Залы',
+            'search_items'      => 'Найти дЗалы',
+            'all_items'         => 'Все Залы',
+            'view_item '        => 'Посмотреть Залы',
+            'edit_item'         => 'Редактировать Залы',
+            'update_item'       => 'Обновить',
+            'add_new_item'      => 'Добавить дЗалы',
+            'new_item_name'     => 'Добавить дЗалы',
+            'menu_name'         => 'Все Залы',
+        ],
+        'description'           => '',
+        'public'                => true,
+        'hierarchical'          => true
+    ]);
 }
 
 /*
