@@ -43,7 +43,7 @@ if( is_home() ):
     </div>
     </section>
     <?php else:
-            get_template_part( 'tmp/no-posts.php' );
+            get_template_part( 'tmp/no-posts' );
         endif;
     ?>
     
