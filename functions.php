@@ -18,6 +18,7 @@ add_action('widgets_init', 'si_register');
 add_action('wp_enqueue_scripts', 'si_scripts');
 // add_filter('show_admin_bar', '__return_false');
 add_action( 'init', 'si_register_types' );
+add_action('add_meta_boxes', 'si_meta_boxes');
 
 function si_setup() {
     register_nav_menu('menu-header', 'Меню шапки');
@@ -225,6 +226,23 @@ function si_register_types() {
     ]);
 }
 
+function si_meta_boxes() {
+    add_meta_box(
+        'si-like',
+        'Количество лайков',
+        'si_meta_like_cb'
+    );
+}
+
+function si_meta_like_cb( $post_obj ) {
+    $likes = get_post_meta(
+        $post_obj->ID,
+        'si-likes',
+        'true'
+    );
+    $likes = $likes ? $likes : 0;
+    echo '<p>' . $likes . '<p>';
+}
 /*
 Add js & css
 */
