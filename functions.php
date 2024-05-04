@@ -230,14 +230,15 @@ function si_meta_boxes() {
     add_meta_box(
         'si-like',
         'Количество лайков',
-        'si_meta_like_cb'
+        'si_meta_like_cb',
+        'post',
     );
 }
 
 function si_meta_like_cb( $post_obj ) {
     $likes = get_post_meta(
         $post_obj->ID,
-        'si-likes',
+        'si-like',
         'true'
     );
     $likes = $likes ? $likes : 0;
